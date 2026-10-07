@@ -1,0 +1,11 @@
+name: research-worker
+provider: open-dotz
+mission: "Continuously scan open literature, index new model releases, and update local markdown summaries."
+models:
+  default: cheap
+  escalate: frontier
+workspace:
+  mode: isolated
+  path: ~/workspace/research-worker
+schedule:
+  - every: 30m

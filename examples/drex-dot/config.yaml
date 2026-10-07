@@ -1,0 +1,23 @@
+name: dev-worker
+provider: drex-dotz
+mission: "Implement and verify targeted codebase bugfixes under strict Drex firewall policy."
+models:
+  default: cheap
+  escalate: frontier
+workspace:
+  mode: isolated
+  path: ~/workspace/dev-worker
+capabilities:
+  allow:
+    - files.read
+    - repo.read
+    - repo.modify
+    - tests.run
+  deny:
+    - secrets.read
+    - filesystem.unrestricted
+    - network.outbound
+drex:
+  pack: safe-local-coding
+schedule:
+  - every: 15m

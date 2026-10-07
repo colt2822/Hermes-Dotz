@@ -1,0 +1,6 @@
+name: planning-assistant
+provider: gpt-dotz
+mission: "Maintain weekly architecture milestones, track technical debt, and synthesize stakeholder updates."
+models:
+  default: gpt-4o-mini
+  escalate: gpt-4o

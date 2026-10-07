@@ -1,0 +1,8 @@
+{
+  "name": "dotz",
+  "label": "Dotz",
+  "description": "Persistent autonomous Dot workers with pluggable providers (Open Dotz, Drex-governed Dotz, and GPT-backed Dotz)",
+  "icon": "Bot",
+  "version": "1.0.0",
+  "api": "plugin_api.py"
+}

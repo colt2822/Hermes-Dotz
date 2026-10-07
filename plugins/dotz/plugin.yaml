@@ -1,0 +1,12 @@
+name: dotz
+label: Hermes Dotz Integration
+version: 0.1.0
+description: Persistent autonomous workers with pluggable providers (Open Dotz, Drex Dotz, GPT Dotz).
+provides_tools:
+  - dots_list
+  - dots_create
+  - dots_assign
+  - dots_status
+  - dots_result
+  - dots_stop
+  - dots_history

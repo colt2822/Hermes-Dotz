@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hermes-dotz"
+version = "0.1.0"
+description = "Generic, pluggable bridge connecting Hermes to persistent autonomous Dot workers"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "Colton McClain", email = "colton@nousresearch.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.100.0",
+    "pydantic>=2.0.0",
+    "pyyaml>=6.0",
+    "httpx>=0.25.0",
+]
+
+[project.optional-dependencies]
+drex = [
+    "drex-agent-firewall>=0.1.3",
+    "drex-dotz>=0.1.0",
+]
+test = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["hermes_dotz*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
